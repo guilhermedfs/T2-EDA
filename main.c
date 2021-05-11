@@ -1,0 +1,39 @@
+#include "BibTrab.h"
+
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+    FILE *file;
+    char nomeArquivo[256];
+    int op = 0;
+
+    do{
+    op = menu();
+        switch (op){
+        case 1:
+            printf("Digite o nome do arquivo que deseja abrir\n");
+            scanf("%s", nomeArquivo);
+            file = fopen(nomeArquivo, "r");
+            if(file){
+                AbreArquivo(file);
+            }
+            else
+                printf("Erro ao abrir arquivo!\n");
+            break;
+        case 2:
+            printf("Calcula Fator de Balanceamento\n");
+            break;
+        case 3:
+            printf("Imprime ABP\n");
+            break;
+        case 0:
+            fclose(file);
+            printf("\n\n-------------------- Programa Encerrado --------------------\n\n");
+            break;
+        default:
+            printf("Opção Inválida!\n");
+            break;
+        }
+    }while (op != 0);
+    return 0;
+}

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1620746603 source:c:\users\dudu\desktop\estudos\eda\aulas\trabalhoprático2\bibtrab.c
+	"BibTrab.h"
+
+1620746038 c:\users\dudu\desktop\estudos\eda\aulas\trabalhoprático2\bibtrab.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+
+1620745919 source:c:\users\dudu\desktop\estudos\eda\aulas\trabalhoprático2\main.c
+	"BibTrab.h"
+

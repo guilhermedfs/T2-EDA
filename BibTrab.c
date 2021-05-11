@@ -26,6 +26,7 @@ No* AbreArquivo(FILE *file){
         Snumero = strtok(NULL,",\n");
     }
     return NovoNo;
+
 }
 
 void InstalaABP(No* NovoNo, int Chave){
@@ -41,3 +42,44 @@ void InstalaABP(No* NovoNo, int Chave){
         NovoNo->pDir = NULL;
     }
 }
+
+
+
+void ArmazenaBal(No *A){
+
+    A->FatBal = ((1 + CalculaBal(A->pDir)) - (1 + CalculaBal(A->pEsq)));
+    if (A->pEsq!=NULL && A->pDir!=NULL){
+        ArmazenaBal(A->pEsq);
+        ArmazenaBal(A->pDir);
+    } else if (A->pEsq!=NULL) {
+        ArmazenaBal(A->pEsq);
+    } else if (A->pDir!=NULL) {
+        ArmazenaBal(A->pDir);
+    }
+
+
+}
+
+int CalculaBal(No *A){
+
+    if (A == NULL) {
+        return 0;
+    } else if ( A->pEsq!=NULL && A->pDir!=NULL ) {
+        if (CalculaBal(A->pEsq)>=CalculaBal(A->pDir)){
+            return 1 + CalculaBal(A->pEsq);
+        } else {
+            return 1 + CalculaBal(A->pDir);
+        }
+    } else if (A->pEsq!=NULL){
+        return 1 + CalculaBal(A->pEsq);
+    } else if (A->pDir!=NULL){
+        return 1 + CalculaBal(A->pDir);
+    } else {
+        return 1;
+    }
+
+}
+
+
+
+

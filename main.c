@@ -1,5 +1,4 @@
 #include "BibTrab.h"
-#include "arvoreBinariaPesquisa.h"
 
 int main()
 {
@@ -17,7 +16,8 @@ int main()
             scanf("%s", nomeArquivo);
             file = fopen(nomeArquivo, "r");
             if(file){
-                No* PNo = AbreArquivo(file);
+                //No* PNo = AbreArquivo(file);
+                PNo = AbreArquivo(file);
             }
             else
                 printf("Erro ao abrir arquivo!\n");
@@ -25,15 +25,19 @@ int main()
         
         case 2:
             printf("Calcula Fator de Balanceamento\n");
+            if (PNo!=NULL){
+                ArmazenaBal(PNo);
+                printf("O Calculo do Fator de Balanceamento foi realizado com sucesso!\n");
+            } else {
+                printf("Erro!! A arvore esta vazia!\n");
+            }            
             break;
-        
         case 3:
             printf("Imprime ABP\n");
             break;
         
         case 0:
             fclose(file);
-            destruirArvoreBinaria(PNo);
             printf("\n\n-------------------- Programa Encerrado --------------------\n\n");
             break;
         

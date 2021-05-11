@@ -12,10 +12,18 @@ typedef struct No {
     int FatBal;
 }No;
 
+
+
 int menu();
 
 No* AbreArquivo(FILE*);
 
 void InstalaABP(No*, int);
+
+void ArmazenaBal(No *A);
+
+int CalculaBal(No *A);
+
+
 
 #endif // BIBTRAB_H_INCLUDED

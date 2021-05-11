@@ -21,16 +21,20 @@ int main()
             else
                 printf("Erro ao abrir arquivo!\n");
             break;
+        
         case 2:
             printf("Calcula Fator de Balanceamento\n");
             break;
+        
         case 3:
             printf("Imprime ABP\n");
             break;
+        
         case 0:
             fclose(file);
             printf("\n\n-------------------- Programa Encerrado --------------------\n\n");
             break;
+        
         default:
             printf("Op��o Inv�lida!\n");
             break;

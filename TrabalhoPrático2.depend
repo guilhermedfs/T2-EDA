@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1620746603 source:c:\users\dudu\desktop\estudos\eda\aulas\trabalhoprático2\bibtrab.c
+1620746731 source:c:\users\dudu\desktop\estudos\eda\aulas\trabalhoprático2\bibtrab.c
 	"BibTrab.h"
 
 1620746038 c:\users\dudu\desktop\estudos\eda\aulas\trabalhoprático2\bibtrab.h
@@ -8,6 +8,6 @@
 	<locale.h>
 	<string.h>
 
-1620745919 source:c:\users\dudu\desktop\estudos\eda\aulas\trabalhoprático2\main.c
+1620747498 source:c:\users\dudu\desktop\estudos\eda\aulas\trabalhoprático2\main.c
 	"BibTrab.h"
 

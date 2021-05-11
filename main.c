@@ -6,6 +6,7 @@ int main()
     FILE *file;
     char nomeArquivo[256];
     int op = 0;
+    No* PNo = NULL;
 
     do{
     op = menu();
@@ -15,7 +16,7 @@ int main()
             scanf("%s", nomeArquivo);
             file = fopen(nomeArquivo, "r");
             if(file){
-                AbreArquivo(file);
+                No* PNo = AbreArquivo(file);
             }
             else
                 printf("Erro ao abrir arquivo!\n");
@@ -31,7 +32,7 @@ int main()
             printf("\n\n-------------------- Programa Encerrado --------------------\n\n");
             break;
         default:
-            printf("Opção Inválida!\n");
+            printf("Opï¿½ï¿½o Invï¿½lida!\n");
             break;
         }
     }while (op != 0);

@@ -16,6 +16,6 @@ int menu();
 
 No* AbreArquivo(FILE*);
 
-void InstalaABP(No*, int);
+No* InstalaABP(No*, int);
 
 #endif // BIBTRAB_H_INCLUDED

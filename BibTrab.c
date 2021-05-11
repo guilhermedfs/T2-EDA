@@ -13,7 +13,7 @@ int menu(){
 
 No* AbreArquivo(FILE *file){
 
-    No *NovoNo = NULL;
+    No* NovoNo = NULL;
 
     char buff[1024];
     char *Snumero;
@@ -22,22 +22,25 @@ No* AbreArquivo(FILE *file){
     Snumero = strtok(buff,",");
     while(Snumero != NULL){
         numero = atoi(Snumero);
-        InstalaABP(NovoNo, numero);
+        NovoNo = InstalaABP(NovoNo, numero);
         Snumero = strtok(NULL,",\n");
     }
     return NovoNo;
 }
 
-void InstalaABP(No* NovoNo, int Chave){
-    if(NovoNo != NULL)
+No* InstalaABP(No *NovoNo, int Chave){
+
+    if(NovoNo != NULL){
         if(Chave < NovoNo->Chave)
-            InstalaABP(NovoNo->pEsq, Chave);
+            NovoNo->pEsq = InstalaABP(NovoNo->pEsq, Chave);
         else
-            InstalaABP(NovoNo->pDir, Chave);
+            NovoNo->pDir = InstalaABP(NovoNo->pDir, Chave);
+    }
     else{
         NovoNo = (No*) malloc (sizeof(No));
         NovoNo->Chave = Chave;
         NovoNo->pEsq = NULL;
         NovoNo->pDir = NULL;
     }
+    return NovoNo;
 }

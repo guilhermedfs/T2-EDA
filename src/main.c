@@ -15,15 +15,10 @@ int main()
             printf("Digite o nome do arquivo que deseja abrir\n");
             scanf("%s", nomeArquivo);
             file = fopen(nomeArquivo, "r");
-<<<<<<< HEAD
             if(file){
                 //No* PNo = AbreArquivo(file);
                 PNo = AbreArquivo(file);
             }
-=======
-            if(file)
-                PNo = AbreArquivo(file);
->>>>>>> 97779ee0812523320b690a0f23c8cbf0e202ab6f
             else
                 printf("Erro ao abrir arquivo!\n");
             break;
@@ -37,10 +32,6 @@ int main()
                 printf("Erro!! A arvore esta vazia!\n");
             }            
             break;
-<<<<<<< HEAD
-=======
-
->>>>>>> 97779ee0812523320b690a0f23c8cbf0e202ab6f
         case 3:
             printf("Imprime ABP\n");
             break;

@@ -18,7 +18,7 @@ int menu();
 
 No* AbreArquivo(FILE*);
 
-void InstalaABP(No*, int);
+No* InstalaABP(No*, int);
 
 void ArmazenaBal(No *A);
 

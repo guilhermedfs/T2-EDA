@@ -16,7 +16,6 @@ int main()
             scanf("%s", nomeArquivo);
             file = fopen(nomeArquivo, "r");
             if(file){
-                //No* PNo = AbreArquivo(file);
                 PNo = AbreArquivo(file);
             }
             else

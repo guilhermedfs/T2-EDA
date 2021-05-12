@@ -15,8 +15,15 @@ int main()
             printf("Digite o nome do arquivo que deseja abrir\n");
             scanf("%s", nomeArquivo);
             file = fopen(nomeArquivo, "r");
+<<<<<<< HEAD:main.c
             if(file)
                 PNo = AbreArquivo(file);
+=======
+            if(file){
+                //No* PNo = AbreArquivo(file);
+                PNo = AbreArquivo(file);
+            }
+>>>>>>> 771ecc4cb660c171635608198df23564a3d8396d:src/main.c
             else
                 printf("Erro ao abrir arquivo!\n");
             break;
@@ -32,6 +39,7 @@ int main()
             break;
         case 3:
             printf("Imprime ABP\n");
+            imprimir(PNo);
             break;
         case 0:
             fclose(file);

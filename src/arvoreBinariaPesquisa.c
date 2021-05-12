@@ -159,3 +159,13 @@ void destruirArvoreBinaria(ArvoreBinaria *arvoreBinaria) {
 	destruirNo(arvoreBinaria);
 	arvoreBinaria = NULL;
 }
+
+void imprimir(ArvoreBinaria* root){
+	if(root){
+		printf("<");
+		imprimir(root->esq);
+		printf("([%d]-fb[%d])", root->chave, root->FatBal);
+		imprimir(root->dir);
+		printf(">");
+	}
+}

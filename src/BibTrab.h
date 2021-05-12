@@ -8,6 +8,7 @@
 
 typedef struct No {
     int Chave;
+    int info;
     struct No *pEsq, *pDir;
     int FatBal;
 }No;

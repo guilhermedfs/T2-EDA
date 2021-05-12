@@ -34,6 +34,7 @@ int main()
             break;
         case 3:
             printf("Imprime ABP\n");
+            imprimir(PNo);
             break;
 
         case 0:

@@ -2,12 +2,14 @@
 
 int menu(){
     int op;
-    printf("Digite a op��o desejada:\n");
-    printf("1 - Para Gerar ABP\n");
+    printf("\n----------------------- ABP -----------------------\n\n");
+    printf("1 - Gerar ABP\n");
     printf("2 - Calcular Fator de Balanceamento\n");
     printf("3 - Imprimir ABP\n");
-    printf("0 - Para Sair\n");
+    printf("0 - Sair\n");
+    printf("Digite a opcao desejada: ");
     scanf("%d", &op);
+    system("clear || cls");
     return op;
 }
 
@@ -25,6 +27,7 @@ No* AbreArquivo(FILE *file){
         NovoNo = InstalaABP(NovoNo, numero);
         Snumero = strtok(NULL,",\n");
     }
+    printf("A Arvore Binaria de Pesquisa foi construida com sucesso!\n\n");
     return NovoNo;
 
 }

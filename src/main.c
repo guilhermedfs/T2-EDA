@@ -12,12 +12,12 @@ int main()
     op = menu();
         switch (op){
         case 1:
+            printf("\n----------------------- GERA ABP -----------------------\n\n");
             printf("Digite o nome do arquivo que deseja abrir\n");
             scanf("%s", nomeArquivo);
             file = fopen(nomeArquivo, "r");
-            if(file){
+            if(file)
                 PNo = AbreArquivo(file);
-            }
             else
                 printf("Erro ao abrir arquivo!\n");
             break;
@@ -35,7 +35,6 @@ int main()
             printf("Imprime ABP\n");
             imprimir(PNo);
             break;
-
         case 0:
             fclose(file);
             destruirArvoreBinaria(PNo);

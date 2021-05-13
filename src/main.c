@@ -12,6 +12,7 @@ int main()
     op = menu();
         switch (op){
         case 1:
+            printf("\n----------------------- GERA ABP -----------------------\n\n");
             printf("Digite o nome do arquivo que deseja abrir\n");
             scanf("%s", nomeArquivo);
             file = fopen(nomeArquivo, "r");

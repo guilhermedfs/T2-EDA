@@ -14,7 +14,7 @@ int main()
         case 1:
             printf("\n----------------------- GERA ABP -----------------------\n\n");
             printf("Digite o nome do arquivo que deseja abrir\n");
-            scanf("%s", nomeArquivo);
+            scanf(“ %[^\n]s”, nomeArquivo);
             file = fopen(nomeArquivo, "r");
             if(file)
                 PNo = AbreArquivo(file);
@@ -42,7 +42,7 @@ int main()
             break;
 
         default:
-            printf("Op��o Inv�lida!\n");
+            printf("Opção Inválida!\n");
             break;
         }
     }while (op != 0);

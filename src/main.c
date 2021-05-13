@@ -38,6 +38,7 @@ int main()
 
         case 0:
             fclose(file);
+            destruirArvoreBinaria(PNo);
             printf("\n\n-------------------- Programa Encerrado --------------------\n\n");
             break;
 

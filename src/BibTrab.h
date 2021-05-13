@@ -25,6 +25,10 @@ void ArmazenaBal(No *A);
 
 int CalculaBal(No *A);
 
+void destruirNo(No *no);
 
+void destruirArvoreBinaria(No* arvoreBinaria);
+
+void imprimir(No* root);
 
 #endif // BIBTRAB_H_INCLUDED

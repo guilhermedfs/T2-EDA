@@ -143,29 +143,3 @@ void emOrdem(ArvoreBinaria *no) {
 	printf("%d, ", no->chave);
 	emOrdem(no->dir);
 }
-
-void destruirNo(ArvoreBinaria *no) {
-	if (no == NULL)
-		return;
-	destruirNo(no->esq);
-	destruirNo(no->dir);
-	free(no);
-	no = NULL;
-}
-
-void destruirArvoreBinaria(ArvoreBinaria *arvoreBinaria) {
-	if (arvoreBinaria == NULL)
-		return;
-	destruirNo(arvoreBinaria);
-	arvoreBinaria = NULL;
-}
-
-void imprimir(ArvoreBinaria* root){
-	if(root){
-		printf("<");
-		imprimir(root->esq);
-		printf("([%d]-fb[%d])", root->chave, root->FatBal);
-		imprimir(root->dir);
-		printf(">");
-	}
-}

@@ -28,7 +28,3 @@ void preOrdem(ArvoreBinaria *no);
 void posOrdem(ArvoreBinaria *no);
 
 void emOrdem(ArvoreBinaria *no);
-
-void destruirNo(struct No *no);
-
-void destruirArvoreBinaria(ArvoreBinaria *arvoreBinaria);

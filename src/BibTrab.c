@@ -83,6 +83,28 @@ int CalculaBal(No *A){
 
 }
 
+void destruirNo(No* no) {
+	if (no == NULL)
+		return;
+	destruirNo(no->pEsq);
+	destruirNo(no->pDir);
+	free(no);
+	no = NULL;
+}
 
+void destruirArvoreBinaria(No* arvoreBinaria) {
+	if (arvoreBinaria == NULL)
+		return;
+	destruirNo(arvoreBinaria);
+	arvoreBinaria = NULL;
+}
 
-
+void imprimir(No* root){
+	if(root){
+		printf("<");
+		imprimir(root->pEsq);
+		printf("([%d]-fb[%d])", root->Chave, root->FatBal);
+		imprimir(root->pDir);
+		printf(">");
+	}
+}

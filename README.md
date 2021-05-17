@@ -11,7 +11,7 @@
 - MAKE
 ## Instruções
 - Para executar, digitar o comando: <b>make</b> e depois <b>make run</b>.
-- Caminho para inserção dos arquivos de arquivos: .../T2-EDA/bin
+- Caminho para inserção dos arquivos .csv: .../T2-EDA/bin
 
 
 

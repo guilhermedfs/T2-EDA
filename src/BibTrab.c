@@ -104,10 +104,8 @@ void destruirArvoreBinaria(No* arvoreBinaria) {
 
 void imprimir(No* root){
 	if(root){
-		printf("<");
 		imprimir(root->pEsq);
-		printf("([%d]-fb[%d])", root->Chave, root->FatBal);
+		printf("[%d]-fb[%d]\n", root->Chave, root->FatBal);
 		imprimir(root->pDir);
-		printf(">");
 	}
 }
